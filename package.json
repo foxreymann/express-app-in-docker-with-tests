@@ -1,0 +1,23 @@
+{
+  "name": "express-app-in-docker-with-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/foxreymann/express-app-in-docker-with-tests.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/foxreymann/express-app-in-docker-with-tests/issues"
+  },
+  "homepage": "https://github.com/foxreymann/express-app-in-docker-with-tests#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
