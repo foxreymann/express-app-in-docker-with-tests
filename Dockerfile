@@ -1,7 +1,7 @@
 FROM node:8.15
 
 # Create app directory
-WORKDIR /usr/src/app
+WORKDIR /opt/app
 
 # Install app dependencies
 COPY package*.json ./

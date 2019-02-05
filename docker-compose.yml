@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+
+  app:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    image: node:8
+    container_name: app
+    working_dir: /opt/app
+    volumes:
+      - .:/opt/app
+    ports:
+      - 9000:8080
+    tty: true
