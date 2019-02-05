@@ -9,6 +9,7 @@ function start(){
 
 function test(){
   docker-compose run --rm $container_name /bin/bash -c 'npm test'
+  return $?
 }
 
 function clean(){
@@ -20,7 +21,13 @@ case $command in
     clean
     ;;
   "start")
-    docker-compose up -d
+    clean
+    test
+    if [ "$?" -ne 0 ]; then
+      echo "Unit test failed - unable to start the app"
+      exit 1
+    fi
+    start
     ;;
   "test")
     test
