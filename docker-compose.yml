@@ -6,7 +6,6 @@ services:
     build:
       dockerfile: Dockerfile
       context: .
-    image: node:8
     container_name: app
     working_dir: /opt/app
     volumes:

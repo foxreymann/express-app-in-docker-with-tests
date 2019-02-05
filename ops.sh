@@ -8,7 +8,7 @@ function start(){
 }
 
 function test(){
-  docker-compose run --rm $container_name /bin/bash -c 'npm test'
+  docker-compose run --rm $container_name /bin/bash -c 'npm install && npm test'
   return $?
 }
 
