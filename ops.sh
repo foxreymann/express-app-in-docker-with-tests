@@ -3,14 +3,26 @@
 command="$1"
 container_name="app"
 
+function start(){
+  docker-compose up -d
+}
+
+function test(){
+  docker-compose run --rm $container_name /bin/bash -c 'npm test'
+}
+
+function clean(){
+  docker rm -f $container_name
+}
+
 case $command in
   "clean")
-    docker rm -f $container_name
+    clean
     ;;
   "start")
     docker-compose up -d
     ;;
   "test")
-    docker-compose run --rm $container_name /bin/bash -c 'npm test'
+    test
     ;;
 esac
